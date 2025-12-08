@@ -1,0 +1,180 @@
+/* =====================================================
+   GLOBAL DYNAMIC BACKGROUND (USING YOUR GIF)
+   ===================================================== */
+.stApp {
+    background: url("https://i.gifer.com/5WWU.gif") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    color: #e2e8f0 !important;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Dark overlay for readability */
+.stApp::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 10, 20, 0.55);   /* độ mờ 55% */
+    z-index: -1;
+}
+
+/* Main container spacing */
+.block-container {
+    padding-top: 1.8rem;
+    padding-bottom: 3rem;
+    max-width: 1200px;
+}
+
+/* =====================================================
+   SIDEBAR
+   ===================================================== */
+section[data-testid="stSidebar"] {
+    background: rgba(0, 0, 0, 0.80) !important;
+    border-right: 1px solid rgba(148,163,184,0.25);
+}
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+section[data-testid="stSidebar"] p {
+    color: #bfdbfe !important;
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+.stButton > button {
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+    color: #f8fafc;
+    border-radius: 999px;
+    padding: 0.6rem 1.6rem;
+    border: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.25s ease-in-out;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 25px rgba(37, 99, 235, 0.55);
+}
+
+/* =====================================================
+   INPUTS + SLIDERS
+   ===================================================== */
+.stTextInput,
+.stNumberInput,
+.stSelectbox,
+.stSlider,
+.stFileUploader {
+    background-color: rgba(15, 23, 42, 0.75) !important;
+    border-radius: 0.85rem !important;
+    padding: 6px;
+}
+
+/* 👉 Slider: chỉ tô thanh track mảnh, bỏ ô xanh to */
+.stSlider > div > div {
+    background: transparent !important;  /* bỏ nền xanh to */
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+/* Thanh chạy (track) của slider */
+.stSlider [data-testid="stTickBar"] {
+    background-color: rgba(37, 99, 235, 0.45) !important;
+    border-radius: 999px;
+    height: 4px;
+}
+
+/* Thumb (nút tròn) giữ màu mặc định của Streamlit; nếu muốn đổi:
+.stSlider [data-testid="stThumb"] > div {
+    background-color: #ef4444 !important;
+}
+*/
+
+/* =====================================================
+   GLASS CARD (TAB CONTENT WRAPPER)
+   ===================================================== */
+.glass-card {
+    background: rgba(15, 23, 42, 0.80); /* semi-transparent glass */
+    border-radius: 1.2rem;
+    padding: 1.6rem 1.8rem;
+    border: 1px solid rgba(96,165,250,0.75);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.75);
+    margin-top: 1.5rem;
+    margin-bottom: 1.8rem;
+}
+
+/* =====================================================
+   TOP STATS CARDS
+   ===================================================== */
+.stats-card {
+    background: rgba(30,58,138, 0.85);
+    border-radius: 1rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid rgba(147,197,253,0.85);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.75);
+}
+
+.stats-card-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #dbeafe;
+    margin-bottom: 0.2rem;
+}
+
+.stats-card-value {
+    font-size: 1.4rem;
+    font-weight: 750;
+    color: #ffffff;
+}
+
+.stats-card-desc {
+    font-size: 0.85rem;
+    color: #e0f2fe;
+}
+
+/* =====================================================
+   TABS
+   ===================================================== */
+button[data-baseweb="tab"] {
+    font-weight: 600 !important;
+    color: #dbeafe !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    border-bottom: 3px solid #60a5fa !important;
+    color: #ffffff !important;
+}
+
+/* =====================================================
+   DATAFRAME STYLE
+   ===================================================== */
+[data-testid="stDataFrame"] {
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+/* =====================================================
+   VIDEO PLAYER
+   ===================================================== */
+video {
+    border-radius: 1rem;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.footer-text {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-align: center;
+    margin-top: 2.5rem;
+}
