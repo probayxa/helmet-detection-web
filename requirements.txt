@@ -1,15 +1,7 @@
-# ==== Minimal requirements for Helmet Detection Streamlit app on Streamlit Cloud ====
-
-# Web UI
 streamlit==1.38.0
+ultralytics==8.1.8
+opencv-python-headless==4.5.5.64
 
-# YOLO + dependencies (sẽ tự kéo torch, torchvision phù hợp)
-ultralytics==8.3.0
-
-# OpenCV bản headless để tránh lỗi libGL trên server
-opencv-python-headless==4.8.1.78
-
-# Các thư viện phụ trợ
 numpy==1.26.4
 pandas==2.2.3
 pillow==10.4.0
