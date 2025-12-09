@@ -1,16 +1,21 @@
-# YOLOv11 Helmet Detection Requirements
-ultralytics>=8.3.0
-torch>=2.1.0
-torchvision>=0.16.0
-torchmetrics>=1.0.0
-opencv-python-headless>=4.8.0
-numpy>=1.24.0
-pandas>=2.0.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-pillow>=10.0.0
-tqdm>=4.66.0
-pyyaml>=6.0
-requests>=2.31.0
-scipy>=1.11.0
-streamlit>=1.28.0
+# ==== Minimal requirements for Helmet Detection Streamlit app on Streamlit Cloud ====
+
+# Web UI
+streamlit==1.38.0
+
+# YOLO + dependencies (sẽ tự kéo torch, torchvision phù hợp)
+ultralytics==8.3.0
+
+# OpenCV bản headless để tránh lỗi libGL trên server
+opencv-python-headless==4.8.1.78
+
+# Các thư viện phụ trợ
+numpy==1.26.4
+pandas==2.2.3
+pillow==10.4.0
+matplotlib==3.9.2
+seaborn==0.13.2
+tqdm==4.66.5
+pyyaml==6.0.2
+requests==2.32.3
+scipy==1.14.1
